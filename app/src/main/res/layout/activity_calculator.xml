@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="edu.fullerton.ecs.reversepolishnotation.CalculatorActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/inputNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <TextView
+            android:id="@+id/stack0TextView"
+            style="@style/StackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/stack1TextView"
+            style="@style/StackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack0TextView" />
+        <TextView
+            android:id="@+id/stack2TextView"
+            style="@style/StackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack1TextView" />
+
+        <TextView
+            android:id="@+id/stack3TextView"
+            style="@style/StackText.TopStack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:text="0"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack2TextView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:useDefaultMargins="true"
+        >
+
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            style="@style/Base.Widget.AppCompat.ImageButton"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:scaleType="fitCenter"
+            app:srcCompat="@android:drawable/ic_input_delete" />
+
+        <Button
+            android:id="@+id/buttonIDK"
+
+            android:text="%"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/buttonDrop"
+            style="@style/AppTheme.OperationButton"
+
+            android:text="Drop"/>
+        <Button
+            android:id="@+id/buttonDiv"
+            style="@style/AppTheme.OperationButton"
+
+            android:text="/"/>
+        <Button
+            android:id="@+id/button7"
+            style="@style/AppTheme.NumberButton"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="8"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/button9"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="9"/>
+        <Button
+            android:id="@+id/buttonMult"
+            style="@style/AppTheme.OperationButton"
+
+            android:text="*"/>
+        <Button
+            android:id="@+id/button4"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="4"/>
+        <Button
+            android:id="@+id/button5"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="5"/>
+        <Button
+            android:id="@+id/button6"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="6"/>
+        <Button
+            android:id="@+id/buttonSub"
+            style="@style/AppTheme.OperationButton"
+
+            android:text="-"/>
+        <Button
+            android:id="@+id/button1"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="1"/>
+        <Button
+            android:id="@+id/button2"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="2"/>
+        <Button
+            android:id="@+id/button3"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="3"/>
+        <Button
+            android:id="@+id/buttonAdd"
+            style="@style/AppTheme.OperationButton"
+
+            android:text="+"/>
+        <Button
+            android:id="@+id/buttonDecimal"
+
+            android:text="."/>
+        <Button
+            android:id="@+id/button0"
+            style="@style/AppTheme.NumberButton"
+
+            android:text="0"/>
+
+        <Button
+            android:id="@+id/buttonEnter"
+            style="@style/AppTheme.OperationButton"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:text="ENTER" />
+    </GridLayout>
+</LinearLayout>
